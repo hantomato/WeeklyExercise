@@ -12,7 +12,7 @@ namespace WeeklyExercise
         {
 
 
-
+            // 된건가?
             Console.WriteLine("test start");
 
         }
