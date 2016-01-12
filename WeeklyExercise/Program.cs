@@ -11,7 +11,7 @@ namespace WeeklyExercise
         static void Main(string[] args)
         {
 
-
+            Console.WriteLine("test start");
         }
     }
 }
