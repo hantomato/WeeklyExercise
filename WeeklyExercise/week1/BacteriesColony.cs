@@ -4,8 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+/// <summary>
+/// week1
+/// https://community.topcoder.com/stat?c=problem_statement&pm=13604&rd=16277
+/// </summary>
 namespace WeeklyExercise.week1
 {
+
     class BacteriesColony
     {
 
