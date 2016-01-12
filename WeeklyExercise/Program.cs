@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,10 +12,11 @@ namespace WeeklyExercise
         static void Main(string[] args)
         {
 
+            new week1.BacteriesColony().doing();
 
-            // 된건가?
-            Console.WriteLine("test start");
+            Console.Read();
 
         }
+
     }
 }
