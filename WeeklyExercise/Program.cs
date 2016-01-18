@@ -12,7 +12,7 @@ namespace WeeklyExercise
         static void Main(string[] args)
         {
 
-            new week1.BacteriesColony().doing();
+            new WeeklyExercise.topcorder.srm646.TheConsecutiveIntegersDivTwo().doing();
 
             Console.Read();
 
