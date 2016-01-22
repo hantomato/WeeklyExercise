@@ -14,6 +14,16 @@ namespace WeeklyExercise
             _log(msg);
         }
 
+        public static void log(int msg)
+        {
+            log(msg.ToString());
+        }
+
+        public static void log(long msg)
+        {
+            log(msg.ToString());
+        }
+
         private static void _log(string message,
                 [CallerFilePath] string filePath = "",
                 [CallerLineNumber] int lineNumber = 0)

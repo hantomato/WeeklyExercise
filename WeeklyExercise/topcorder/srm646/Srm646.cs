@@ -11,7 +11,7 @@ namespace WeeklyExercise.topcorder.srm646
 {
     class TheConsecutiveIntegersDivTwo
     {
-        public static int find(int[] numbers, int k)
+        public int find(int[] numbers, int k)
         {
             if (k == 1) return 0;
 
@@ -31,7 +31,7 @@ namespace WeeklyExercise.topcorder.srm646
             print(find(new int[] { -96, -53, 82, -24, 6, -75 }, 2));
             print(find(new int[] { 64, -31, -56 }, 2));
             //return: 2
-            //return: 1
+            //return: 0
             //return: 20
             //return: 24
         }

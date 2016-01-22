@@ -13,6 +13,7 @@ namespace WeeklyExercise
         {
 
             new WeeklyExercise.topcorder.srm646.TheConsecutiveIntegersDivTwo().doing();
+            //new WeeklyExercise.topcorder.srm646.TheConsecutiveIntegersDivTwo_rx().doing();
 
             Console.Read();
 
