@@ -15,7 +15,7 @@ namespace WeeklyExercise.topcorder.srm646
         {
             if (k == 1) return 0;
 
-            int res = 100000;
+            int res = 10000001;
             Array.Sort(numbers);
             for (int i=0; i<numbers.Length - 1; ++i)
             {
@@ -41,4 +41,5 @@ namespace WeeklyExercise.topcorder.srm646
             Logger.log("return: " + n);
         }
     }
+
 }
