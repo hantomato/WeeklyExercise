@@ -12,9 +12,11 @@ namespace WeeklyExercise
         static void Main(string[] args)
         {
 
-            new WeeklyExercise.topcorder.srm646.TheConsecutiveIntegersDivTwo().doing();
+            //new WeeklyExercise.topcorder.srm645.BacteriesColony().doing();
+            //new WeeklyExercise.topcorder.srm646.TheConsecutiveIntegersDivTwo().doing();
             //new WeeklyExercise.topcorder.srm646.TheConsecutiveIntegersDivTwo_rx().doing();
-
+            new WeeklyExercise.topcorder.srm646.PeacefulLine().doing();
+            
             Console.Read();
 
         }

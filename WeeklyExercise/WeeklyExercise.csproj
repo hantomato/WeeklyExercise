@@ -65,6 +65,8 @@
     <Compile Include="topcorder\srm645\Srm645.cs" />
     <Compile Include="topcorder\srm646\Srm646.cs" />
     <Compile Include="topcorder\srm646\srm646_rx.cs" />
+    <Compile Include="topcorder\srm647\Srm647.cs" />
+    <Compile Include="topcorder\srm647\srm647_rx.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
