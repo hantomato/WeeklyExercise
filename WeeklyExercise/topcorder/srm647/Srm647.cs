@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 /// <summary>
 /// https://community.topcoder.com/stat?c=problem_statement&pm=13632&rd=16279
-/// hahaha
 /// </summary>
 namespace WeeklyExercise.topcorder.srm646
 {
@@ -14,13 +13,9 @@ namespace WeeklyExercise.topcorder.srm646
     {
         public string makeLine(int[] x)
         {
+            int mostAgeCount = x.Length / 2 + x.Length % 2;
             Dictionary<int, int> dicCateAge = categorizeAge(x);
-            int mostAgeCount = extractPeakValue(dicCateAge);
-
-            if (mostAgeCount <= (x.Length / 2 + x.Length % 2))
-                return "possible";
-            else
-                return "impossible";
+            return checkPossible(mostAgeCount, dicCateAge);
         }
 
         private Dictionary<int, int> categorizeAge(int[] x)
@@ -35,18 +30,16 @@ namespace WeeklyExercise.topcorder.srm646
             }
             return temp;
         }
-
-        private int extractPeakValue(Dictionary<int, int> dicCateAge)
+        private string checkPossible(int mostAgeCount, Dictionary<int, int> dicCateAge)
         {
-            
-            int peak = 0;
             foreach (int age in dicCateAge.Keys)
             {
-                if (peak < dicCateAge[age])
-                    peak = dicCateAge[age];
+                if (mostAgeCount < dicCateAge[age])
+                    return "impossible";
             }
-            return peak;
+            return "possible";
         }
+
 
         public void doing()
         {
