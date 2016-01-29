@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 /// <summary>
 /// https://community.topcoder.com/stat?c=problem_statement&pm=13632&rd=16279
+/// hahaha
 /// </summary>
 namespace WeeklyExercise.topcorder.srm646
 {
