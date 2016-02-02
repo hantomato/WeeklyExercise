@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 /// <summary>
 /// https://community.topcoder.com/stat?c=problem_statement&pm=13632&rd=16279
 /// </summary>
-namespace WeeklyExercise.topcorder.srm646
+namespace WeeklyExercise.topcorder.srm647
 {
     class PeacefulLine
     {

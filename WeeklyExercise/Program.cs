@@ -15,8 +15,10 @@ namespace WeeklyExercise
             //new WeeklyExercise.topcorder.srm645.BacteriesColony().doing();
             //new WeeklyExercise.topcorder.srm646.TheConsecutiveIntegersDivTwo().doing();
             //new WeeklyExercise.topcorder.srm646.TheConsecutiveIntegersDivTwo_rx().doing();
-            new WeeklyExercise.topcorder.srm646.PeacefulLine().doing();
-            
+            //new WeeklyExercise.topcorder.srm647.PeacefulLine().doing();
+            //new WeeklyExercise.topcorder.srm648.KitayutaMart2().doing();
+            new WeeklyExercise.topcorder.srm648.KitayutaMart2_rx().doing();
+
             Console.Read();
 
         }
