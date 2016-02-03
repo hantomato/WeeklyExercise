@@ -40,8 +40,10 @@ namespace WeeklyExercise.topcorder.srm648
         public int numBought(int K, int T)
         {
             int idx;
-            for (idx = 1; T > 0; ++idx)
+            for (idx = 0; T >= 0; ++idx)
+            {
                 T -= ((int)Math.Pow(2, idx) * K);
+            }
             
             return idx - 1;
         }
