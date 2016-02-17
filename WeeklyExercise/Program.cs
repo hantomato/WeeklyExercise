@@ -17,7 +17,8 @@ namespace WeeklyExercise
             //new WeeklyExercise.topcorder.srm646.TheConsecutiveIntegersDivTwo_rx().doing();
             //new WeeklyExercise.topcorder.srm647.PeacefulLine().doing();
             //new WeeklyExercise.topcorder.srm648.KitayutaMart2().doing();
-            new WeeklyExercise.topcorder.srm648.KitayutaMart2_rx().doing();
+            //new WeeklyExercise.topcorder.srm648.KitayutaMart2_rx().doing();
+            new WeeklyExercise.topcorder.srm649.DecipherabilityEasy().doing();
 
             Console.Read();
 
