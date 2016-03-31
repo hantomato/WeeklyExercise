@@ -15,7 +15,6 @@ namespace WeeklyExercise.topcorder.srm652
         // ex) 2*4 + 1*2 + 2*4 + 3*5 + 1*2 = 35
         public int solve(int[] a)
         {
-
             //
             return 0;
         }
