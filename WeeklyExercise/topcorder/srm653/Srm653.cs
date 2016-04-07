@@ -8,11 +8,10 @@ using System.Threading.Tasks;
 /// <summary>
 /// https://community.topcoder.com/stat?c=problem_statement&pm=13678
 /// </summary>
-namespace WeeklyExercise.topcorder.srm652
+namespace WeeklyExercise.topcorder.srm653
 {
     class CountryGroup
     {
-        // ex) 2*4 + 1*2 + 2*4 + 3*5 + 1*2 = 35
         public int solve(int[] a)
         {
             //
