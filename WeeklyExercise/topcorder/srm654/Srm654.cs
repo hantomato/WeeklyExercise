@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 /// </summary>
 namespace WeeklyExercise.topcorder.srm654
 {
-
     public class GroupOfAdjacent<TSource, TKey> : IEnumerable<TSource>, IGrouping<TKey, TSource>
     {
         public TKey Key { get; set; }
