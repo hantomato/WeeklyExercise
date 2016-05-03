@@ -25,7 +25,8 @@ namespace WeeklyExercise
             //new WeeklyExercise.topcorder.srm655.BichromeBoard().doing();
             //new WeeklyExercise.topcorder.srm657.EightRooks().doing();
             //new WeeklyExercise.topcorder.srm657.EightRooks_rx().doing();
-            new WeeklyExercise.topcorder.srm658.InfiniteString().doing();
+            //new WeeklyExercise.topcorder.srm658.InfiniteString().doing();
+            new WeeklyExercise.topcorder.srm658.InfiniteString_rx().doing();
 
             Console.Read();
 
