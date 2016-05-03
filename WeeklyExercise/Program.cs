@@ -22,7 +22,10 @@ namespace WeeklyExercise
             //new WeeklyExercise.topcorder.srm650.TaroJiroDividing().doing();
             //new WeeklyExercise.topcorder.srm652.ValueOfString().doing();
             //new WeeklyExercise.topcorder.srm654.SquareScoresDiv2().doing();
-            new WeeklyExercise.topcorder.srm655.BichromeBoard().doing();
+            //new WeeklyExercise.topcorder.srm655.BichromeBoard().doing();
+            //new WeeklyExercise.topcorder.srm657.EightRooks().doing();
+            //new WeeklyExercise.topcorder.srm657.EightRooks_rx().doing();
+            new WeeklyExercise.topcorder.srm658.InfiniteString().doing();
 
             Console.Read();
 

@@ -85,11 +85,8 @@ namespace WeeklyExercise.topcorder.srm657
 
         }
 
-
         public void doing()
         {
-
-
 
             print("Correct, " + isCorrect(new String[]
             {
