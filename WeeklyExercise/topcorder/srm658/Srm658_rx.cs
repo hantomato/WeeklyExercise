@@ -16,26 +16,48 @@ namespace WeeklyExercise.topcorder.srm658
 
         public String equal(String s, String t)
         {
-            return "Equal";
+            // ababab, abab => abababababab
+            int lcm = (int)getLCM((long)s.Length, (long)t.Length);
+            String s1 = s.ToObservable()
+                .Repeat()
+                .Take(lcm)
+                .Aggregate("", (x, y) => x + y)
+                .First();
+
+            String t1 = t.ToObservable()
+                .Repeat()
+                .Take(lcm)
+                .Aggregate("", (x, y) => x + y)
+                .First();
+
+            return s1.Equals(t1) ? "Equal" : "Not equal";
         }
 
 
+        private long gcd(long a, long b)
+        {
+            while (b > 0)
+            {
+                long temp = b;
+                b = a % b;
+                a = temp;
+            }
+            return a;
+        }
+
+        private long getLCM(long a, long b)
+        {
+            return a * (b / gcd(a, b));
+        }
 
         public void doing()
         {
-
-            print("Equal, " + equal("ab", "abab"));
-            print("Not equal, " + equal("abc", "bca"));
-            print("Not equal, " + equal("abab", "aba"));
-            print("Equal, " + equal("aaaaa", "aaaaaa"));
-            print("Equal, " + equal("ababab", "abab"));
-            print("Not equal, " + equal("a", "z"));
-
-        }
-
-        public void print(String text)
-        {
-            Logger.log("return: " + text);
+            Console.WriteLine("Equal, " + equal("ab", "abab"));
+            Console.WriteLine("Not equal, " + equal("abc", "bca"));
+            Console.WriteLine("Not equal, " + equal("abab", "aba"));
+            Console.WriteLine("Equal, " + equal("aaaaa", "aaaaaa"));
+            Console.WriteLine("Equal, " + equal("ababab", "abab"));
+            Console.WriteLine("Not equal, " + equal("a", "z"));
         }
     }
 

@@ -17,9 +17,9 @@ namespace WeeklyExercise.topcorder.srm658
         public String equal(String s, String t)
         {
             // ababab, abab => abababababab
-            long nn = lcm((long)s.Length, (long)t.Length);
-            s = expand(s, nn);
-            t = expand(t, nn);
+            long lcm = getLCM((long)s.Length, (long)t.Length);
+            s = expand(s, lcm);
+            t = expand(t, lcm);
             return s.Equals(t) ? "Equal" : "Not equal";
         }
 
@@ -42,28 +42,19 @@ namespace WeeklyExercise.topcorder.srm658
             return a;
         }
 
-        private long lcm(long a, long b)
+        private long getLCM(long a, long b)
         {
             return a * (b / gcd(a, b));
         }
 
-
         public void doing()
         {
-
-            print("Equal, " + equal("ab", "abab"));
-            print("Not equal, " + equal("abc", "bca"));
-            print("Not equal, " + equal("abab", "aba"));
-            print("Equal, " + equal("aaaaa", "aaaaaa"));
-            print("Equal, " + equal("ababab", "abab"));
-            print("Not equal, " + equal("a", "z"));
-
-
-        }
-
-        public void print(String text)
-        {
-            Logger.log("return: " + text);
+            Console.WriteLine("Equal, " + equal("ab", "abab"));
+            Console.WriteLine("Not equal, " + equal("abc", "bca"));
+            Console.WriteLine("Not equal, " + equal("abab", "aba"));
+            Console.WriteLine("Equal, " + equal("aaaaa", "aaaaaa"));
+            Console.WriteLine("Equal, " + equal("ababab", "abab"));
+            Console.WriteLine("Not equal, " + equal("a", "z"));
         }
     }
 
