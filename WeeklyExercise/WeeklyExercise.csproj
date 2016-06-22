@@ -84,6 +84,7 @@
     <Compile Include="topcorder\srm662\Srm662.cs" />
     <Compile Include="topcorder\srm663\Srm663_2.cs" />
     <Compile Include="topcorder\srm663\Srm663.cs" />
+    <Compile Include="topcorder\srm665\Srm665_rx.cs" />
     <Compile Include="topcorder\srm665\Srm665.cs" />
   </ItemGroup>
   <ItemGroup>

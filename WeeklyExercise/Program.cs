@@ -32,7 +32,8 @@ namespace WeeklyExercise
             //new WeeklyExercise.topcorder.srm662.Hexspeak().doing();
             //new WeeklyExercise.topcorder.srm663.ChessFloor().doing();
             //new WeeklyExercise.topcorder.srm663_2.ChessFloor().doing();
-            new WeeklyExercise.topcorder.srm665.LuckyXor().doing();
+            //new WeeklyExercise.topcorder.srm665.LuckyXor().doing();
+            new WeeklyExercise.topcorder.srm665_rx.LuckyXor().doing();
 
 
             Console.Read();
