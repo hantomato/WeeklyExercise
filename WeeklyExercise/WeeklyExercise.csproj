@@ -81,6 +81,10 @@
     <Compile Include="topcorder\srm658\Srm658.cs" />
     <Compile Include="topcorder\srm659\Srm659.cs" />
     <Compile Include="topcorder\srm661\Srm661.cs" />
+    <Compile Include="topcorder\srm662\Srm662.cs" />
+    <Compile Include="topcorder\srm663\Srm663_2.cs" />
+    <Compile Include="topcorder\srm663\Srm663.cs" />
+    <Compile Include="topcorder\srm665\Srm665.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

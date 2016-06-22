@@ -28,7 +28,12 @@ namespace WeeklyExercise
             //new WeeklyExercise.topcorder.srm658.InfiniteString().doing();
             //new WeeklyExercise.topcorder.srm658.InfiniteString_rx().doing();
             //new WeeklyExercise.topcorder.srm659.FilipTheFrog().doing();
-            new WeeklyExercise.topcorder.srm661.FallingSand().doing();
+            //new WeeklyExercise.topcorder.srm661.FallingSand().doing();
+            //new WeeklyExercise.topcorder.srm662.Hexspeak().doing();
+            //new WeeklyExercise.topcorder.srm663.ChessFloor().doing();
+            //new WeeklyExercise.topcorder.srm663_2.ChessFloor().doing();
+            new WeeklyExercise.topcorder.srm665.LuckyXor().doing();
+
 
             Console.Read();
 
