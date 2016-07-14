@@ -53,43 +53,49 @@ namespace WeeklyExercise.utils
                 if (miSetMethod != null && kvp.Value != null)
                 {
                     //Console.WriteLine("Value.GetType() : " + kvp.Value.GetType());
-
-                    if (typeof(Dictionary<String, Object>).Equals(kvp.Value.GetType()))
+                    try
                     {
-                        // new instance some object
-                        Type ObjType = GetObjectTypeUsingName(srcType, kvp.Key);
-                        object subObject = NewInstance(ObjType);
-
-                        // set object to body
-                        miSetMethod.Invoke(body, new object[] { subObject });
-                        SetFields(subObject, kvp.Value as Dictionary<String, Object>);
-                    }
-                    else if (typeof(List<Object>).Equals(kvp.Value.GetType()))
-                    {
-                        // new Instance of list
-                        Type ObjType = GetObjectTypeUsingName(srcType, kvp.Key);
-                        object listObject = NewInstance(ObjType);
-
-                        // set listObject to body
-                        miSetMethod.Invoke(body, new object[] { listObject });
-
-                        foreach (Object itemParam in kvp.Value as List<Object>)
+                        if (typeof(Dictionary<String, Object>).Equals(kvp.Value.GetType()))
                         {
-                            // new Instance of list item
-                            Type itemType = listObject.GetType().GetGenericArguments()[0];
-                            object newItem = NewInstance(itemType);
+                            // new instance some object
+                            Type ObjType = GetObjectTypeUsingName(srcType, kvp.Key);
+                            object subObject = NewInstance(ObjType);
 
-                            // set list item to body
-                            MethodInfo miListAdd7 = listObject.GetType().GetMethod("Add");
-                            miListAdd7.Invoke(listObject, new object[] { newItem });
-
-                            // set list item 
-                            SetFields(newItem, itemParam as Dictionary<String, Object>);
+                            // set object to body
+                            miSetMethod.Invoke(body, new object[] { subObject });
+                            SetFields(subObject, kvp.Value as Dictionary<String, Object>);
                         }
-;
+                        else if (typeof(List<Object>).Equals(kvp.Value.GetType()))
+                        {
+                            // new Instance of list
+                            Type ObjType = GetObjectTypeUsingName(srcType, kvp.Key);
+                            object listObject = NewInstance(ObjType);
+
+                            // set listObject to body
+                            miSetMethod.Invoke(body, new object[] { listObject });
+
+                            foreach (Object itemParam in kvp.Value as List<Object>)
+                            {
+                                // new Instance of list item
+                                Type itemType = listObject.GetType().GetGenericArguments()[0];
+                                object newItem = NewInstance(itemType);
+
+                                // set list item to body
+                                MethodInfo miListAdd7 = listObject.GetType().GetMethod("Add");
+                                miListAdd7.Invoke(listObject, new object[] { newItem });
+
+                                // set list item 
+                                SetFields(newItem, itemParam as Dictionary<String, Object>);
+                            }
+    ;
+                        }
+                        else {
+                            miSetMethod.Invoke(body, new object[] { kvp.Value });
+                        }
                     }
-                    else {
-                        miSetMethod.Invoke(body, new object[] { kvp.Value });
+                    catch (Exception e)
+                    {
+                        ;
                     }
                 }
             }
