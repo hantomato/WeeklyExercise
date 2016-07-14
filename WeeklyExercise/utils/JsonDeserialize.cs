@@ -49,27 +49,26 @@ namespace WeeklyExercise.utils
                 //Console.WriteLine("Key = {0}, Value = {1}", kvp.Key, kvp.Value);
                 setMethodName = GetSetMethodName(kvp.Key);
                 MethodInfo miSetMethod = srcType.GetMethod(setMethodName);
-                //Console.WriteLine("Value.GetType() : " + kvp.Value.GetType());
 
-                if (miSetMethod != null)
+                if (miSetMethod != null && kvp.Value != null)
                 {
+                    //Console.WriteLine("Value.GetType() : " + kvp.Value.GetType());
+
                     if (typeof(Dictionary<String, Object>).Equals(kvp.Value.GetType()))
                     {
                         // new instance some object
-                        String getMethodName = GetGetMethodName(kvp.Key);
-                        MethodInfo miGetMethod = srcType.GetMethod(getMethodName);
-                        object subMember = NewInstance(miGetMethod.ReturnType);
+                        Type ObjType = GetObjectTypeUsingName(srcType, kvp.Key);
+                        object subObject = NewInstance(ObjType);
 
                         // set object to body
-                        miSetMethod.Invoke(body, new object[] { subMember });
-                        SetFields(subMember, kvp.Value as Dictionary<String, Object>);
+                        miSetMethod.Invoke(body, new object[] { subObject });
+                        SetFields(subObject, kvp.Value as Dictionary<String, Object>);
                     }
                     else if (typeof(List<Object>).Equals(kvp.Value.GetType()))
                     {
                         // new Instance of list
-                        String getMethodName = GetGetMethodName(kvp.Key);
-                        MethodInfo miGetMethod = srcType.GetMethod(getMethodName);
-                        object listObject = NewInstance(miGetMethod.ReturnType);
+                        Type ObjType = GetObjectTypeUsingName(srcType, kvp.Key);
+                        object listObject = NewInstance(ObjType);
 
                         // set listObject to body
                         miSetMethod.Invoke(body, new object[] { listObject });
@@ -111,6 +110,13 @@ namespace WeeklyExercise.utils
         private T NewInstance<T>()
         {
             return (T)Activator.CreateInstance(typeof(T), new object[] { });
+        }
+
+        private Type GetObjectTypeUsingName(Type srcType, string keyName)
+        {
+            String getMethodName = GetGetMethodName(keyName);
+            MethodInfo miGetMethod = srcType.GetMethod(getMethodName);
+            return miGetMethod.ReturnType;
         }
 
         private string GetGetMethodName(string methodName)
@@ -159,4 +165,5 @@ namespace WeeklyExercise.utils
         }
 
     }
+
 }
