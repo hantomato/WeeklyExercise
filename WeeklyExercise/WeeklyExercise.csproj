@@ -87,6 +87,7 @@
     <Compile Include="topcorder\srm665\Srm665_rx.cs" />
     <Compile Include="topcorder\srm665\Srm665.cs" />
     <Compile Include="topcorder\srm666\Srm666.cs" />
+    <Compile Include="topcorder\srm669\Srm669.cs" />
     <Compile Include="utils\JsonDeserialize.cs" />
     <Compile Include="utils\MiniJSON.cs" />
   </ItemGroup>
